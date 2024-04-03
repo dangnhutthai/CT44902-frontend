@@ -9,7 +9,7 @@
         <i class="fas fa-address-book"></i>
       </h4>
       <ContactList
-        v-if="filteredContactsCount > 0"
+        v-if="filteredContactsCount> 0"
         :contacts="filteredContacts"
         v-model:activeIndex="activeIndex"
       />
@@ -18,6 +18,7 @@
         <button class="btn btn-sm btn-primary" @click="refreshList()">
           <i class="fas fa-redo"></i> Làm mới
         </button>
+        
         <button class="btn btn-sm btn-success" @click="goToAddContact">
           <i class="fas fa-plus"></i> Thêm mới
         </button>
@@ -120,7 +121,7 @@ export default {
       }
     },
     goToAddContact() {
-      this.$router.push({ name: "contact.add" });
+      this.$router.push({ name: "contact.create" });
     },
   },
   mounted() {
@@ -133,4 +134,5 @@ export default {
   text-align: left;
   max-width: 750px;
 }
+
 </style>

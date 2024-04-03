@@ -12,10 +12,14 @@ const routes = [{
     name: "notfound",
     component: () => import("@/views/NotFound.vue"),
 }, {
-    path: "/contacts/:id",
+    path: "/contact/:id",
     name: "contact.edit",
     component: () => import("@/views/ContactEdit.vue"),
     props: true // Truyền các biến trong $route.params vào làm props
+}, {
+    path: "/contacts",
+    name: "contact.create",
+    component: () => import("@/views/ContactCreate.vue"),
 }, ];
 const router = createRouter({
     history: createWebHistory(
